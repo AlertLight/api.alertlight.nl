@@ -13,7 +13,13 @@ class CreateLocationTable extends Migration
      */
     public function up()
     {
-        //
+		Schema::create('location', function (Blueprint $table) {
+			$table->increments('rowid');
+			$table->string('poleid')->unique();
+			$table->string('city');
+			$table->string('geolocation');
+			$table->timestamps();
+		});
     }
 
     /**

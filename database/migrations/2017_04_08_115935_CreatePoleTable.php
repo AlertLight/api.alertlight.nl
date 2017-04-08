@@ -13,7 +13,11 @@ class CreatePoleTable extends Migration
      */
     public function up()
     {
-        //
+		Schema::create('pole', function (Blueprint $table) {
+			$table->increments('poleid');
+			$table->string('locationid');
+			$table->timestamps();
+		});
     }
 
     /**

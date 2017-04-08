@@ -16,3 +16,8 @@ use Illuminate\Http\Request;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::post('pole/new', 'PoleController@NewPole');
+Route::get('pole', 'PoleController@GetAll');
+
+Route::post('location/new', 'LocationController@NewLocation');
