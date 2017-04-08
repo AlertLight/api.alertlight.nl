@@ -27,4 +27,9 @@ class LocationController extends Controller
 
 	}
 
+	public function GetAll()
+	{
+		return Location::all();
+	}
+
 }
