@@ -6,5 +6,5 @@ use Illuminate\Database\Eloquent\Model;
 
 class Location extends Model
 {
-    protected $talbe = "location";
+    protected $table = "location";
 }

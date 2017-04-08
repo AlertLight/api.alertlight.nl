@@ -13,13 +13,15 @@ class LocationController extends Controller
 		$this->validate($request, array(
 			'poleid' => 'required',
 			'city' => 'required',
-			'geolocation' => 'required'
+			'lat' => 'required',
+			'long' => 'required'
 		));
 
 		$location = new Location();
 		$location->poleid = $request->poleid;
 		$location->city = $request->city;
-		$location->geolocation = $request->geolocation;
+		$location->lat = $request->lat;
+		$location->long = $request->long;
 
 		$location->save();
 
