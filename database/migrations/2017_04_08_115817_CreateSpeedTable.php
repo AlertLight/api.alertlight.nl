@@ -17,7 +17,6 @@ class CreateSpeedTable extends Migration
 			$table->increments('rowid');
 			$table->string('poleid')->unique();
 			$table->string('km');
-			$table->string('location');
 			$table->timestamps();
 		});
     }
