@@ -22,7 +22,7 @@ class SpeedController extends Controller
 
 	public function GetAll()
 	{
-		return Speed::all();
+		return Speed::all()->last();
 	}
 
 }
