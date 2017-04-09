@@ -7,16 +7,12 @@ use App\Speed;
 
 class SpeedController extends Controller
 {
-    public function NewSpeed(Request $request)
+    public function NewSpeed($poleid, $km)
 	{
-		$this->validate($request, array(
-			'poleid' => 'required',
-			'km' => 'required',
-		));
 
 		$speed = new Speed();
-		$speed->poleid = $request->poleid;
-		$speed->km = $request->km;
+		$speed->poleid = $poleid;
+		$speed->km = $km;
 
 		$speed->save();
 

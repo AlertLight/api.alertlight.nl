@@ -23,5 +23,5 @@ Route::get('pole', 'PoleController@GetAll');
 Route::post('location/new', 'LocationController@NewLocation');
 Route::get('location', 'LocationController@GetAll');
 
-Route::post('speed/new', 'SpeedController@NewSpeed');
+Route::get('speed/new/{poleid}/{km}', 'SpeedController@NewSpeed');
 Route::get('speed', 'SpeedController@GetAll');
