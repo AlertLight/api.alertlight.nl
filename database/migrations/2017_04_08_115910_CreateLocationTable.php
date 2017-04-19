@@ -17,7 +17,8 @@ class CreateLocationTable extends Migration
 			$table->increments('rowid');
 			$table->string('poleid')->unique();
 			$table->string('city');
-			$table->string('geolocation');
+			$table->string('lat');
+			$table->string('long');
 			$table->timestamps();
 		});
     }

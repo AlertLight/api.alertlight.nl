@@ -15,9 +15,8 @@ class CreateSpeedTable extends Migration
     {
 		Schema::create('speed', function (Blueprint $table) {
 			$table->increments('rowid');
-			$table->string('poleid')->unique();
+			$table->string('poleid');
 			$table->string('km');
-			$table->string('location');
 			$table->timestamps();
 		});
     }
